@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1.
+# DONE: 1.
 #
 #   In this module, we will be creating a way for you to be able to assign
 #   tasks to each of the seven dwarves for their day at work.
@@ -29,9 +29,19 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def response(name):
+    match name:
+        case "Happy":
+            print("Helloooo! I'm ready to work!")
+        case "Doc":
+            return print("At your service!")
+        case "Grumpy":
+            return print("Can I go home now?")
+        case _:
+            return print("Heigh-Hoooooo!!!")
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #
 #   Now, we need a function to handle the assigning of tasks.
 #
@@ -52,9 +62,12 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def work_order(name):
+    task = input(f"Please give {name} a task: ")
+    return (name, task)
 
 ###############################################################################
-# TODO: 3.
+# DONE: 3.
 #
 #   Now, let's put things together.
 #
@@ -78,3 +91,12 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def main():
+    dwarves = ["Happy", "Doc", "Grumpy", "Dopey", "Bashful", "Sleepy", "Sneezy"]
+    final_task = []
+    for x in dwarves:
+        assignments = work_order(x)
+        response(x)
+        final_task.append(assignments)
+    print(final_task)
+main()

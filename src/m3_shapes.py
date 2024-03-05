@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1.
+# DONE: 1.
 #
 #   In this module, we are going to create various shape functions (similar to
 #   the one where you made a triangle in your coding exercises).
@@ -18,9 +18,14 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def rectangle(height, width):
+    for _ in range(1, height + 1):
+        for y in range(width +1, width + 2):
+            print("*" * y)
+# rectangle(3,4)
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #
 #   For this _TODO_, write a function called inverted_triangle() that takes one
 #   parameter:
@@ -38,6 +43,10 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def inverted_triangle(size):
+    for x in range(size, 0, -1):
+        print("*" * x)
+# inverted_triangle(6)
 
 ###############################################################################
 # TODO: 3.
@@ -61,9 +70,14 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def box(height, width):
+    for x in range(1, height + 1, 2):
+        for y in range(1, width + 1):
+            print("*" * x, "*" * y)
+box(4,5)
 
 ###############################################################################
-# TODO: 4.
+# DONE: 4.
 #
 #   For this _TODO_, write a function called main() that calls each of your
 #   functions above. It should print these shapes in order:
@@ -76,3 +90,8 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def main():
+    rectangle(3,5)
+    inverted_triangle(7)
+    box(4,6)
+# main()
